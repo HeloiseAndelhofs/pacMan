@@ -4,6 +4,14 @@
     --eyesColor: blue;
     --bgCl: black;
 }
+@keyframes movingGhost {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(100px);
+    }
+}
 body{
     background-color: var(--bgCl);
 }
@@ -14,6 +22,10 @@ body{
     grid-template-rows: repeat(18, 50px);
     align-content: center;
     justify-content: center;
+    animation-name: movingGhost;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 .column1{
     background-color: var(--skin);
